@@ -28,7 +28,7 @@ class Guru:
     # some cached City URIs to avoid fetch_subject_uri call - cities not listed can also be queried
     popular_cities = {
         'London': 'wd:Q84',
-        'Paris': 'wd:Q90',
+        'Paris': 'wd:Q90',  # for some reason Paris doesn't work even though
         'Amsterdam': 'wd:Q727',
         'New York City': 'wd:Q60',
     }
@@ -135,8 +135,8 @@ class TestGuru(TestCase):
             'how old is trump': '75',
             'how old is Bill Clinton': '75',
             'what is the population of London': '8908081',
-            # 'what is the population of Paris': '2175601',
             'what is the population of Amsterdam': '860124',
+            # 'what is the population of Paris': '2175601',
             'how old is Hillary Clinton': '74',
         }
 
