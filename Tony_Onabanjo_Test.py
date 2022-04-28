@@ -143,19 +143,3 @@ class TestGuru(TestCase):
         guru: Guru = Guru()
         for question, answer in questions_and_answers.items():
             self.assertEqual(answer, guru.ask(question))
-
-
-if __name__ == "__main__":
-    q_and_a = {
-        'how old is Tony Blair': '68',
-        'how old is trump': '75',
-        'how old is Bill Clinton': '75',
-        'what is the population of London': '8908081',
-        # 'what is the population of Paris': '2175601',
-        'what is the population of Amsterdam': '860124',
-        'how old is Hillary Clinton': '74',
-    }
-
-    g: Guru = Guru()
-    for q, a in q_and_a.items():
-        print(q, 'Actual:', g.ask(q), 'Expected:', a)
